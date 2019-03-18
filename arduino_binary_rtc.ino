@@ -1,4 +1,22 @@
 /*
+<A binary realtime clock using a DST3231_RTC-chip>
+Copyright (C) <2019>  <Elias Kleimeier>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/*
  * Pins connections:
  * LED11 - LED12: first hour digit, first column from the left, numbered bottom to top
  * LED21 - LED24: second hour digit, second column from the left, numbered bottom to top
