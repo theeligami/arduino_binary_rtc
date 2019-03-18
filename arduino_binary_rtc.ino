@@ -18,10 +18,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 /*
  * Pins connections:
- * LED11 - LED12: first hour digit, first column from the left, numbered bottom to top
- * LED21 - LED24: second hour digit, second column from the left, numbered bottom to top
- * LED31 - LED33: first minute digit, third column from the left, numbered bottom to top
- * LED41 - LED44: second minute digit, fourth column from the left, numbered bottom to top
+ * D11 - D12: first hour digit, first column from the left, numbered bottom to top
+ * D21 - D24: second hour digit, second column from the left, numbered bottom to top
+ * D31 - D33: first minute digit, third column from the left, numbered bottom to top
+ * D41 - D44: second minute digit, fourth column from the left, numbered bottom to top
  */
 
 #include <Wire.h>
@@ -30,25 +30,25 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 RTC_DS3231 rtc;
 
 // First hour digit
-#define LED11 0
-#define LED12 1
+#define D11 0
+#define D12 1
 // Second hour digit
-#define LED21 2
-#define LED22 3
-#define LED23 4
-#define LED24 5
+#define D21 2
+#define D22 3
+#define D23 4
+#define D24 5
 // First minute digit
-#define LED31 6
-#define LED32 7
-#define LED33 8
+#define D31 6
+#define D32 7
+#define D33 8
 // Second minute digit
-#define LED41 9
-#define LED42 10
-#define LED43 11
-#define LED44 12
+#define D41 9
+#define D42 10
+#define D43 11
+#define D44 12
 
-const int hourPins[6] = {LED11, LED12, LED21, LED22, LED23, LED24};
-const int minutePins[7] = {LED31, LED32, LED33, LED41, LED42, LED43, LED44};
+const int hourPins[6] = {D11, D12, D21, D22, D23, D24};
+const int minutePins[7] = {D31, D32, D33, D41, D42, D43, D44};
 
 void setup() 
 {
@@ -80,10 +80,11 @@ void loop()
 {
   DateTime now = rtc.now();
 
-  int hour1 = now.hour() / 10;      // LED1X
-  int hour2 = now.hour() % 10;      // LED2X
-  int minute1 = now.minute() / 10;  // LED3X
-  int minute2 = now.minute() % 10;  // LED4X
+  int hour1 = now.hour() / 10;      // D1X
+  int hour2 = now.hour() % 10;      // D2X
+  int minute1 = now.minute() / 10;  // D3X
+  int minute2 = now.minute() % 10;  // D4X
+  
   // First hour digit
   for (int c = 1, k = 0; c >= 0; c--) 
   {
