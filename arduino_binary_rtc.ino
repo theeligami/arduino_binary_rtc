@@ -1,6 +1,4 @@
 /*
- * Rewrite of the binary clock
- * 
  * Pins connections:
  * LED11 - LED12: first hour digit, first column from the left, numbered bottom to top
  * LED21 - LED24: second hour digit, second column from the left, numbered bottom to top
