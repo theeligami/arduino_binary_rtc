@@ -29,6 +29,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 RTC_DS3231 rtc;
 
+#define TIMEZONE 1
+
 // First hour digit
 #define D11 0
 #define D12 1
@@ -80,8 +82,10 @@ void loop()
 {
   DateTime now = rtc.now();
 
-  int hour1 = now.hour() / 10;      // D1X
-  int hour2 = now.hour() % 10;      // D2X
+  int adjHour = (now.hour() + TIMEZONE) % 24;
+  
+  int hour1 = adjHour / 10;      // D1X
+  int hour2 = adjHour % 10;      // D2X
   int minute1 = now.minute() / 10;  // D3X
   int minute2 = now.minute() % 10;  // D4X
   
