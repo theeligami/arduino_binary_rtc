@@ -16,5 +16,7 @@ ___
 __The time displayed on the clock is off or from the wrong time zone:__
 
 This is due to the \__DATE__ variable (which is used by the DS3231) in your system being wrong. Check if your UEFI/BIOS time is set correctly.
+You can set you timezone with the help of the \TIMEZONE macro. \TIMEZONE will be added to the hours variable.
+
 
 _Feel free to report errors and bugs or give input on possible optimizations!_
