@@ -12,6 +12,12 @@ For the code to work you will need adafruit's [RTClib](https://github.com/adafru
 
 ___
 
+### Note:
+I am also working on a wall-mount version of the clock as well as a custom pcb. Instead of a DS3231 a DCF-77 time signal receiver will be used by the new circuit.
+The project will also be ported to pure C instead of Arduino C++ in the future. For more information check out the "kicad" directory.
+
+___
+
 ### Known Issues:
 __The time displayed on the clock is off or from the wrong time zone:__
 
